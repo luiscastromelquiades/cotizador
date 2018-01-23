@@ -1,0 +1,17 @@
+[26-Apr-2016 05:42:22 America/Chicago] PHP Parse error:  syntax error, unexpected '$email' (T_VARIABLE) in /home/jopo3003/public_html/cotizador/api/v1/dbHandler.php on line 239
+[26-Apr-2016 05:42:22 America/Chicago] PHP Parse error:  syntax error, unexpected '$email' (T_VARIABLE) in /home/jopo3003/public_html/cotizador/api/v1/dbHandler.php on line 239
+[26-Apr-2016 05:42:22 America/Chicago] PHP Parse error:  syntax error, unexpected '$email' (T_VARIABLE) in /home/jopo3003/public_html/cotizador/api/v1/dbHandler.php on line 239
+[26-Apr-2016 05:42:22 America/Chicago] PHP Parse error:  syntax error, unexpected '$email' (T_VARIABLE) in /home/jopo3003/public_html/cotizador/api/v1/dbHandler.php on line 239
+[26-Apr-2016 05:42:28 America/Chicago] PHP Parse error:  syntax error, unexpected '$email' (T_VARIABLE) in /home/jopo3003/public_html/cotizador/api/v1/dbHandler.php on line 239
+[26-Apr-2016 07:56:17 America/Chicago] PHP Parse error:  syntax error, unexpected 'try' (T_TRY) in /home/jopo3003/public_html/cotizador/api/v1/dbHandler.php on line 303
+[26-Apr-2016 07:56:18 America/Chicago] PHP Parse error:  syntax error, unexpected 'try' (T_TRY) in /home/jopo3003/public_html/cotizador/api/v1/dbHandler.php on line 303
+[26-Apr-2016 07:56:18 America/Chicago] PHP Parse error:  syntax error, unexpected 'try' (T_TRY) in /home/jopo3003/public_html/cotizador/api/v1/dbHandler.php on line 303
+[26-Apr-2016 07:56:18 America/Chicago] PHP Parse error:  syntax error, unexpected 'try' (T_TRY) in /home/jopo3003/public_html/cotizador/api/v1/dbHandler.php on line 303
+[26-Apr-2016 07:58:53 America/Chicago] PHP Parse error:  syntax error, unexpected 'try' (T_TRY) in /home/jopo3003/public_html/cotizador/api/v1/dbHandler.php on line 303
+[26-Apr-2016 07:59:19 America/Chicago] PHP Parse error:  syntax error, unexpected 'try' (T_TRY) in /home/jopo3003/public_html/cotizador/api/v1/dbHandler.php on line 303
+[26-Apr-2016 08:02:16 America/Chicago] PHP Parse error:  syntax error, unexpected 'while' (T_WHILE) in /home/jopo3003/public_html/cotizador/api/v1/dbHandler.php on line 308
+[26-Apr-2016 08:02:16 America/Chicago] PHP Parse error:  syntax error, unexpected 'while' (T_WHILE) in /home/jopo3003/public_html/cotizador/api/v1/dbHandler.php on line 308
+[26-Apr-2016 08:02:16 America/Chicago] PHP Parse error:  syntax error, unexpected 'while' (T_WHILE) in /home/jopo3003/public_html/cotizador/api/v1/dbHandler.php on line 308
+[26-Apr-2016 08:02:16 America/Chicago] PHP Parse error:  syntax error, unexpected 'while' (T_WHILE) in /home/jopo3003/public_html/cotizador/api/v1/dbHandler.php on line 308
+[26-Apr-2016 08:02:33 America/Chicago] PHP Parse error:  syntax error, unexpected 'while' (T_WHILE) in /home/jopo3003/public_html/cotizador/api/v1/dbHandler.php on line 308
+[26-Apr-2016 08:02:42 America/Chicago] PHP Parse error:  syntax error, unexpected 'while' (T_WHILE) in /home/jopo3003/public_html/cotizador/api/v1/dbHandler.php on line 308

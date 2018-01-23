@@ -1,0 +1,35 @@
+
+<div class="table-responsive">
+<div class="panel panel-primary">
+  <div class="panel-heading azul-masoko">Lista de usuarios
+      <div class="sw-search" >
+            <div class="nav-search" id="nav-search">
+                    Filtro: <span class="input-icon">
+                        <input placeholder="Buscar..." class="nav-search-input" ng-model="filterUser" ng-change="resetLimit();"  autocomplete="off" type="text" style="width:300px;" focus>
+                        <i class="search-icon fa fa-search nav-search-icon"></i>
+                    </span>
+            </div>
+        </div>
+    </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+    <tr ng-show="users.length==0"><td style="vertical-align:middle;"><i class="fa fa-ban fa-3x"></i>&nbsp;No hay usuarios</td></tr>
+    <tr ng-hide="users.length>-1"><td style="vertical-align:middle;"><i class="fa fa-cog fa-3x fa-spin"></i>&nbsp;Cargando..</td></tr>
+    
+    <tr><th ng-repeat="c in columns">{{c.text}}</th></tr>
+
+    <tr ng-repeat="c in users | filter:filterUser | orderBy:'uid'" id="{{c.uid}}" >
+        <td>{{c.uid}}</td><td>{{c.name}}</td><td>{{c.email}}</td>
+        <td>
+            <button class="btn" ng-class="{ADMINISTRADOR:'amarillo-masoko', USUARIO:'azul-masoko'}[c.nivel]" ng-click="changeUserStatus(c);">{{c.nivel}}</button>
+        </td>
+        <td style="width:150px">
+            <div class="btn-group">
+              <button type="button" class="btn fa fa-times-circle rojo-masoko" ng-click="deleteUser(c);"></button>
+            </div>
+        </td>
+    </tr>
+    </table>
+</div>
+</div>
+</div>

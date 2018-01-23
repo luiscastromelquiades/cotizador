@@ -1,0 +1,56 @@
+  
+         <button type="button" class="close" ng-click="cancel();">
+        <i class="fa fa-times-circle-o" style="margin:10px;color:blue;"></i>
+    </button>
+    <div class="modal-header">
+        <h3 class="modal-title">Servicio [ID: {{product.id}}]</h3>
+    </div>
+    <div class="modal-body">
+        <form name="product_form" class="form-horizontal" role="form" validate>
+            <form-element label="NOMBRE" mod="product">
+                <input type="text" class="form-control" name="name" placeholder="Nombre" ng-model="product.nombre" focus required/>
+            </form-element>
+            <form-element label="DESCRIPCION" mod="product" >
+            <textarea tbio id=“tbioTextArea” class="form-control" style="width:100%;
+    height: 50%;" name="descripcion" placeholder="Descripción" ng-model="product.descripcion" id="editor"></textarea>
+            
+            </form-element>
+            <form-element label="PRECIO PUBLICO" mod="product">
+                <input type="text" name="price" class="form-control" placeholder="Precio Publico" ng-model="product.precioPublico"  only-numbers required/>
+                <small class="errorMessage" ng-show="product_form.precioPublico.$dirty && product_form.precioPublico.$invalid"> Ingresa el precio publico.</small>
+            </form-element>
+            <form-element label="IVA Publico" mod="product">
+                <input type="text" name="ivapub" class="form-control" placeholder="IVA Publico" ng-model="product.IVAPub"  only-numbers readonly/>
+            </form-element>
+
+           <form-element label="PRECIO ESPECIAL" mod="product">
+                <input type="text" name="stock" class="form-control" placeholder="Precio Especial" ng-model="product.precioEspecial" only-numbers />
+                <small class="errorMessage" ng-show="product_form.precioEspecial.$dirty && product_form.precioEspecial.$invalid"> Ingresa el precio especial</small>
+            </form-element>
+            <form-element label="IVA Paquete" mod="product">
+                <input type="text" name="ivapaq" class="form-control" placeholder="IVA Paquete" ng-model="product.IVAPaq"  only-numbers readonly/>
+            </form-element>
+
+            <form-element label="NOTA" mod="product">
+                <input type="text" name="note" class="form-control" placeholder="Nota" ng-model="product.nota"/>
+                <small class="errorMessage" ng-show="product_form.nota.$dirty && product_form.nota.$invalid"> Ingresa la nota</small>
+            </form-element>
+
+            <div class="space"></div>
+            <div class="space-4"></div>
+            <div class="modal-footer">
+                <form-element label="">
+                    <div class="text-right">
+                        <a class="btn btn-sm rojo-masoko" ng-click="cancel()"><i class="ace-icon fa fa-reply"></i>Cancelar</a>
+                        <button ng-click="saveProduct(product);" 
+                                ng-disabled="product_form.$invalid"
+                                class="btn btn-sm btn-primary azul-masoko" type="button"
+                                >
+                            <i class="ace-icon fa fa-check"></i>{{buttonText}}
+                        </button>
+                    </div>
+                </form-element>
+            </div>
+        </form>
+    </div>
+    

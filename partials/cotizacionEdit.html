@@ -1,0 +1,183 @@
+  
+         <button type="button" class="close" ng-click="cancel();">
+        <i class="fa fa-times-circle-o" style="margin:10px;color:blue;"></i>
+    </button>
+    <div class="modal-header">
+        <h3 class="modal-title">{{title}} {{cotizacion.id_cotizacion}}</h3>
+    </div>
+    <div class="modal-body">
+       <div class="row" >
+         <div class="col-md-12">
+          <form name="cotizacion_form" class="form-horizontal" role="form" validate>
+           
+               <div class="row">
+                   <div class="col-md-6">
+                        <form-element label="ESTATUS" mod="cotizacion" >
+                           <select name="estatus"  ng-model="cotizacion.estatus" class="form-control" required> 
+                              <option value="EN ESPERA" >EN ESPERA</option> 
+                              <option value="EN PROCESO">EN PROCESO</option>
+                              <option value="CANCELADA">CANCELADA</option>
+                              <option value="ENTREGADA POR MAIL Y EN ESPERA">ENTREGADA POR MAIL Y EN ESPERA</option>
+                              <option value="ENTREGADA EN PAPEL">ENTREGADA EN PAPEL</option>
+                              <option value="FINALIZADA">FINALIZADA</option>
+                            </select>
+                        </form-element>
+                    </div>
+                    <div class="col-md-6">
+                        <form-element label="TEMA" mod="cotizacion">
+                            <input type="text" class="form-control" name="tema" placeholder="Nombre de cotización" ng-model="cotizacion.tema" required/>
+                        </form-element>
+                   </div>
+                </div>
+               <div class="row">
+                   <div class="col-md-6">
+                    <form-element label="FECHA" mod="cotizacion">
+                        <datepicker ng-model="cotizacion.fecha" required></datepicker>
+                    </form-element>
+                   </div>
+                   <div class="col-md-6">
+                    <form-element label="VIGENCIA" mod="cotizacion">
+                        <datepicker ng-model="cotizacion.vigencia" required></datepicker>
+                    </form-element>
+                   </div>
+               </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <form-element label="CLIENTE" mod="cotizacion">
+                            <input type="text" class="form-control" name="cliente" placeholder="Nombre de cliente" ng-model="cotizacion.nombre" ng-value="ABC" required/>
+                        </form-element>
+                    </div>
+                    <div class="col-md-6">
+                        <form-element label="EMAIL" mod="cotizacion" >
+                            <input type="email"  class="form-control" style="width:100%;
+                height: 50%;" name="email" placeholder="Email" ng-model="cotizacion.email" required />
+                        </form-element>
+                    </div>
+                </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                        <form-element label="TELEFONO" mod="cotizacion" >
+                            <input type="tel"  class="form-control" style="width:100%;
+                height: 50%;" name="email" placeholder="Telefono" ng-model="cotizacion.phone" only-numbers required/>
+                        </form-element>
+                    </div>
+                    <div class="col-md-6">
+                        <form-element label="CELULAR" mod="cotizacion" >
+                            <input type="tel"  class="form-control" style="width:100%;
+                    height: 50%;" name="celular" placeholder="Telefono Celular" ng-model="cotizacion.cellphone" only-numbers />
+                            </form-element>
+                    </div>
+                </div>
+                    <!--<div class="row">
+                        <div class="col-md-6">
+                        <form-element label="CON IVA:" mod="cotizacion">
+                                <button ng-click="withiva();" class="btn btn-sm btn-primary amarillo-masoko" type="button" >
+                                        <i class="ace-icon fa fa-check amarillo-masoko"></i>¿IVA?
+                                </button>
+                        </form-element>
+                    </div>
+                   </div>-->
+                <div class="row">
+                    <div class="col-md-6">
+                        <form-element label="ANTICIPO" mod="cotizacion">
+                            <input type="text" name="anticipo" class="form-control" placeholder="Anticipación de pago" ng-model="cotizacion.anticipo" only-numbers required/>
+                        </form-element>
+                    </div>
+                    <div class="col-md-6">
+                        <form-element label="SALDO" mod="cotizacion">
+                            <input type="text" name="saldo" class="form-control" placeholder="Saldo de pago" ng-model="cotizacion.saldo" only-numbers readonly/>
+                        </form-element>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <form-element label="DESCUENTO" mod="cotizacion">
+                            <input type="text" name="descuento" class="form-control" placeholder="Descuento" ng-model="cotizacion.descuento" only-numbers />
+                        </form-element>
+                    </div>
+                    <div class="col-md-6">
+                        <form-element label="IVA" mod="cotizacion">
+                          
+                           <button class="btn" ng-class="{CON_IVA:'amarillo-masoko', SIN_IVA:'rojo-masoko'} [cotizacionctrl.csiva]" ng-click="changeiva();" type="button">{{cotizacionctrl.csiva}}</button>
+                            <input type="text" name="iva" class="form-control" placeholder="IVA" ng-model="cotizacion.iva" only-numbers readonly/>
+                        </form-element>
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="col-md-6">
+                        <form-element label="SUBTOTAL" mod="cotizacion" >
+                            <input type="tel"  class="form-control" style="width:100%;
+                height: 50%;" name="subtotal" placeholder="Subtotal" ng-model="cotizacion.subtotal" only-numbers readonly required/>
+                        </form-element>
+                    </div>
+                    <div class="col-md-6">
+                        <form-element label="TOTAL" mod="cotizacion">
+                            <input type="text" name="total" class="form-control" placeholder="total" ng-model="cotizacion.total"  only-numbers readonly />
+                        </form-element>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <form-element label="COMENTARIO" mod="cotizacion">
+                            <input type="text" name="comentario" class="form-control" placeholder="Comentario para nosotros" ng-model="cotizacion.comentario"/>
+                        </form-element>
+                    </div>
+                    <div class="col-md-6">
+                        <form-element label="FORMA DE PAGO" mod="cotizacion">
+                            <input type="text" name="forma de pago" class="form-control" placeholder="Forma de pago" ng-model="cotizacion.formadepago"/>
+                        </form-element>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-7">
+                        <form-element label="NOTAS Y RESTRICCIONES" mod="cotizacion" >
+                            <textarea tbio id=“tbioTextArea” class="form-control" style="width:100%;
+                height: 50%;" name="notas y restricciones"  ng-model="cotizacion.notasyrestricciones" id="editor"></textarea>
+                        </form-element>
+                    </div>
+                    <div class="col-md-5">
+                        <form-element label="4 DIGITOS" mod="cotizacion" >
+                             <input type="text" name="4digitos" class="form-control" placeholder="4 Digitos bancarios" ng-model="cotizacion.cuatrodigitos"  only-numbers />
+                        </form-element>
+                    </div>
+                </div>
+               <div class="row">
+                   <div class="col-md-12">
+                            <div class="modal-footer">
+                                <form-element label="">
+                                    <div class="text-right">
+
+                                        <button ng-click="saveCotizacion(cotizacion);" 
+                                                ng-disabled="cotizacion_form.$invalid "
+                                                class="btn btn-sm btn-primary amarillo-masoko" type="button"
+                                                >
+                                            <i class="ace-icon fa fa-check "></i>{{buttonTextOne}}
+                                        </button>
+                                    </div>
+                                </form-element>
+                             </div>
+                         </div>
+                   </div>
+                <div class="row">
+                   <div class="col-md-12">
+                        <div class="modal-footer">
+                            <form-element label="">
+                                <div class="text-right">
+
+                                    <button ng-click="saveandSendCotizacion(cotizacion);" 
+                                            ng-disabled="cotizacion_form.$invalid "
+                                            class="btn btn-sm btn-primary azul-masoko" type="button"
+                                            >
+                                        <i class="ace-icon fa fa-check azul-masoko"></i>{{buttonTextTwo}}
+                                    </button>
+                                </div>
+                            </form-element>
+                        </div>
+                    </div>
+               </div>
+            
+        </form>
+        </div>
+    </div>
+    </div>
+    

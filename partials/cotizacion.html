@@ -1,0 +1,131 @@
+<button type="button" class="btn amarillo-masoko" ng-click="open(cotizacion,'lg');"><i class="fa fa-plus"></i>&nbsp;Agregar cotización</button>
+<!--servicios en cotizacion-->
+<div class="table-responsive">
+    <div class="panel panel-primary">
+      <div class="panel-heading azul-masoko">Lista de servicios en cotización
+          <div class="sw-search" >
+                <div class="nav-search" id="nav-search">
+                        Filtro: <span class="input-icon">
+                            <input placeholder="Buscar..." class="nav-search-input" ng-model="filterProduct" ng-change="resetLimit();"  autocomplete="off" type="text" style="width:200px;" focus>
+                            <i class="search-icon fa fa-search nav-search-icon"></i>
+                        </span>
+                </div>
+            </div>
+        </div>
+          <div class="panel-body">
+            <table class="table table-striped">
+            <tr ng-show="products.length==0"><td style="vertical-align:middle;"><i class="fa fa-ban fa-3x"></i>&nbsp;No hay servicios</td></tr>
+            <tr ng-hide="products.length>-1"><td style="vertical-align:middle;"><i class="fa fa-cog fa-3x fa-spin"></i>&nbsp;Cargando..</td></tr>
+
+            <tr><th ng-repeat="c in columns2">{{c.text}}</th></tr>
+
+            <tr ng-repeat="c in products | filter:filterProduct | orderBy:'orden'" id="{{c.id}}"  >
+               <td>
+                    <div class="btn-group">
+                      <button type="button" class="btn fa fa-sort-asc azul-masoko" style="height:20px;" ng-click="upServiceCot(c);" title='Subir servicio'></button>
+                    </div>
+                    <div class="btn-group" style="margin-top: 3px;">
+                      <button type="button" class="btn fa fa-sort-desc azul-masoko" style="height:20px;padding-top:0px;"  ng-click="downServiceCot(c);" title='Bajar servicio'></button>
+                    </div>
+                </td>
+                <td>{{c.nombre}}</td><td>{{c.descripcion | removeHtml }}</td><td>{{c.precioPublico | currency}}</td><td>{{c.precioEspecial | currency}}</td>
+                <td>
+                    <button class="btn" ng-class="{PUBLICO:'amarillo-masoko', PAQUETE:'azul-masoko'}[c.tipoprecio]" ng-click="updatesubtotal();changeProductStatus(c);" title='Cambiar el tipo de precio del servicio'>{{c.tipoprecio}}</button>
+                </td>
+
+                <td>
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-danger fa fa-trash-o rojo-masoko" ng-click="updatesubtotal();pricingOffProduct(c);" title='Quitar servicio de la cotización'></button>
+
+                    </div>
+                </td>
+            </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<div class="panel-secondary" style="float:right;margin-bottom:20px;">
+    <div class="panel-body" style="background:#fff;">
+        <div class="row">
+            <div class="col-md-6">
+                <form-element mod="cotizacion">
+                    <div class="btn-group">
+                        <button ng-click="updatesubtotal();" class="btn btn-primary azul-masoko" type="button" title='Actualizar el total de la cotización'>
+                            <i class="ace-icon fa fa-check"></i>Actualizar
+                        </button>
+                    </div>
+                </form-element>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <form-element label="Subtotal:" mod="cotizacion">
+                        <input type="text"  class="form-control" style="width:80px; height:30px; margin-left:5px; padding-left:5px;" id="subtotal" ng-model="cotizacion.subtotal"/>
+                </form-element>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <form-element label="IVA:" mod="cotizacion">
+                         <input type="text"  class="form-control" style="width:80px; height:30px; margin-left:5px; padding-left:5px;" id="iva" ng-model="cotizacion.iva"/>
+                </form-element>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <form-element label="Total:" mod="cotizacion">
+                         <input type="text"  class="form-control" style="width:80px; height:30px; margin-left:5px; padding-left:5px;" id="total" ng-model="cotizacion.total"/>
+                </form-element>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--termina servicios en cotizacion-->
+
+<div class="table-responsive" style="clear:both;">
+<div class="panel panel-primary">
+  <div class="panel-heading azul-masoko" style="background:#fff;">Lista de cotizaciones
+      <div class="sw-search" >
+            <div class="nav-search" id="nav-search">
+                    Filtro: <span class="input-icon">
+<!--                        <input placeholder="Buscar..." class="nav-search-input" ng-model="filterCotizacion" ng-change="resetLimit();"  autocomplete="off" type="text" style="width:300px;" focus>-->
+                <select name="estatus"  class="nav-search-input" ng-model="filterCotizacion" ng-change="resetLimit();" style="width:200px;">
+                  <option value="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Selecciona-</option> 
+                  <option value="EN ESPERA">EN ESPERA</option> 
+                  <option value="EN PROCESO">EN PROCESO</option>
+                  <option value="CANCELADA">CANCELADA</option>
+                  <option value="ENTREGADA POR MAIL Y EN ESPERA">ENTREGADA POR MAIL Y EN ESPERA</option>
+                  <option value="ENTREGADA EN PAPEL">ENTREGADA EN PAPEL</option>
+                  <option value="FINALIZADA">FINALIZADA</option>
+                </select>
+                        <i class="search-icon fa fa-search nav-search-icon"></i>
+                    </span>
+            </div>
+        </div>
+    </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+    <tr ng-show="cotizaciones.length==0"><td style="vertical-align:middle;"><i class="fa fa-ban fa-3x"></i>&nbsp;No hay cotizaciones</td></tr>
+    <tr ng-hide="cotizaciones.length>-1"><td style="vertical-align:middle;"><i class="fa fa-cog fa-3x fa-spin"></i>&nbsp;Cargando..</td></tr>
+    
+    <tr><th ng-repeat="c in columns">{{c.text}}</th></tr>
+
+    <tr ng-repeat="c in cotizaciones | filter:filterCotizacion | orderBy:'-id_cotizacion' " id="{{c.id_cotizacion}}"  ng-animate=" 'animate'"  >
+        <td><div ng-bind-html="c.enlace"></div></td><td>{{c.id_cotizacion}}</td><td>{{c.estatus}}</td><td>{{c.tema}}</td><td>{{c.nombre}}</td><td>{{c.email }}</td><td>{{c.fecha | date}}</td>
+        <td style="width:150px">
+            <div class="btn-group">
+              <button type="button" class="btn btn-default fa fa-edit" ng-click="open(c,'lg');" title='Editar los datos'></button>
+              <button type="button" class="btn btn-danger fa fa-trash-o rojo-masoko" ng-click="deleteCotizacion(c);" title='Eliminar cotización'></button>
+              <button type="button" class="btn btn-danger fa fa-share-square-o azul-masoko" ng-click="addServicesCot(c);updatesubtotal();" title='Agregar los servicios de esta cotización a la cotización actual'></button>
+            </div>
+        </td>
+    </tr>
+    </table>
+</div>
+</div>
+</div>
+
+

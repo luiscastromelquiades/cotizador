@@ -1,0 +1,45 @@
+<div class="page-content">
+    <div class="col-sm-10 col-sm-offset-1">
+        <div class="login-box" id="login-box visible widget-box no-border">
+            <div class="widget-body">
+                <div class="widget-main">
+                        <h3 class="header blue lighter bigger" style="text-align: center;">
+                            
+                            Iniciar Sesión
+                        </h3>
+                    <div class="input-box">
+                        <form name="loginForm" role="form">
+                            <div>
+                                <label class="label-form" for="email">Email:</label>
+                            </div>
+                            <div>
+                                <input type="text" placeholder="Email o Usuario" class="input-form" ng-model="login.email" name="email" required focus />
+                            </div>
+                            <div>
+                                <label class="label-form" for="password">Contraseña:</label>
+                            </div>
+                            <div>
+                                <input type="password" placeholder="Contraseña" class="input-form"  ng-model="login.password" required />
+                            </div>
+                            <br />
+                            <div>
+                                <button type="submit" class="button-form azul-masoko" ng-click="doLogin(login)" data-ng-disabled="loginForm.$invalid" id="btnLogin" >Entrar</button>
+                            </div>
+                            <div class="space-4"></div>
+                            <br />
+                <div class="col-sm-15">Registrate &nbsp;<a href="#/signup">aquí</a>&nbsp; o &nbsp;<a href="#/signup">Recupera tú contraseña</a></div>
+                       
+                        </form>
+                        
+                    </div>
+            </div><!-- /widget-main -->
+
+            
+        </div><!-- /widget-body -->
+    </div><!-- /login-box -->
+
+</div><!-- /position-relative -->
+</div><!-- /.page-content -->
+
+
+

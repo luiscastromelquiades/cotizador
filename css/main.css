@@ -1,0 +1,404 @@
+@font-face{
+font-family: 'brushed-webfont';
+src: url('../fonts/brushed-webfont.eot');
+src: url('../fonts/brushed-webfont.eot?#iefix') format('embedded-opentype'),
+url('../fonts/brushed-webfont.woff') format('woff'),
+url('../fonts/brushed-webfont.ttf') format('truetype'),
+url('../fonts/brushed-webfont.svg#webfont') format('svg');
+}
+body {
+    margin: 0 auto;
+    font-family: "Open Sans";
+    background: url(../resources/images/backgroundimage.jpg) fixed center;
+    background-repeat: no-repeat; 
+    font-size: 14px;
+}
+/* ng-cloak */
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng.ng-cloak {
+    display: none;
+}
+/*.animated > div.ng-enter{
+    -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s !important;
+  -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s !important;
+  -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s !important;
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s !important;
+}
+.animated > div.ng-leave{
+    -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s !important;
+  -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s !important;
+  -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s !important;
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.1s !important;
+}
+.animated > div.ng-enter,
+.animated > div.ng-leave{
+    opacity: 0.4; !important;
+}*/
+.global-container{
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%; 
+} 
+.menu {
+    background:#232222 !important; 
+    color:white;
+    
+}
+.menu a {
+    text-decoration: none;
+    color: #e2e2e2 !important;
+    font-size: 16px;
+    font-family:'brushed-webfont' !important;
+    padding: 4px;
+    border-radius: 2px;  
+}
+
+.menu a:hover {
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+    -webkit-transition: opacity 0.5s ;
+    -moz-transition: opacity 0.5s ;
+    -o-transition: opacity 0.5s ;
+    transition: opacity 0.5s ;
+}
+
+@media (min-width:768px) and (max-width: 1001px) {
+.container {
+    margin-left:0px;
+}
+}
+
+@media (min-width:320px) and (max-width: 767px) {
+.container {
+    margin-left:0px;
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.services-box a div{
+    font-size: 9px;
+    height: 30px;
+}
+}
+.panel {
+    min-width: 1024px;
+}
+.logout {
+    z-index: 4 !important;
+    position: absolute;
+    margin-left:90% !important;
+    margin-top: -30px;
+    padding: 4px 10px;
+    border-radius: 2px;
+}
+.logout:hover{
+    background: #d53333 !important;
+}
+.logout a{
+    text-decoration: none;
+    color: #fff;
+    padding: 0px;
+    margin: 0px;
+}
+.logout a:hover{
+    background: #d53333 !important;
+}
+.rojo-masoko {  
+    background: #DD0033 !important;
+    color: #fff !important;
+}
+
+.azul-masoko {
+    background:#00ACDD !important;
+    
+}
+
+.negro-masoko {
+    background: #232222 !important;
+    color: #fff;
+}
+
+.amarillo-masoko {
+    background: #F8BE00 !important;
+    color: #000 !important;
+    font-weight: 300 !important;
+}
+
+
+
+
+
+.widget-main {
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+.login-header {
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    height: 30;
+    margin: 0 auto;
+}
+
+.login-header h4 {
+    margin: 0;
+    padding-top: 2;
+    text-align: center;
+}
+.input-box {
+    margin: 10 20 0;
+    height: 60%;   
+}
+.input-box div {   
+    vertical-align:middle;
+    display: flex;
+    flex-wrap: wrap;    
+    justify-content: center;
+}
+.input-box label {
+    font-weight: bold;
+    padding-top: 12;
+}
+.input-box input {
+    width: 70%;
+    height: 25;
+    margin-top: 10;    
+}
+
+#btnLogin {
+    clear: both;
+    width: 40%;
+	height: 25px;
+    border: 1px solid;
+    border-color: #416541;
+    border-radius: 2px;
+	color: #FFF;
+    font-family: 'Freight Sans Bold', 'Helvetica Neue', 'Segoe UI', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    box-shadow:  0px 1px 1px #000;
+    background-color: #38b2b2;
+    margin: 10 auto;
+}
+.services-box div{
+    width: 25%;
+    float: left;
+    height: 100px;
+    text-align: center;
+    margin: 2%;
+    background-color:rgba(8, 8, 8, 0.6);   
+}
+.services-box a{
+    color: #ffffff;
+    font-size: 18px;
+}
+.services-box div:hover {
+    -webkit-filter: blur(5px); 
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px); 
+    -ms-filter: blur(5px); 
+    filter: url(#blur);
+    filter: blur(5px);
+    filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
+-webkit-transition: 6s -webkit-filter linear;
+-moz-transition: 6s -moz-filter linear;
+-o-transition: 6s -o-filter linear;
+transition: 6s filter linear;
+    background-image: url(../resources/images/16.png);
+    background-repeat: no-repeat;
+}
+
+
+
+
+.modal-content {
+  border-radius: 0;
+}
+.table-striped>tbody>tr.change-up>td {
+    color: white;
+    background-color: green;
+    transition: all 1s;
+  -webkit-transition: all 1s ease-in-out;
+}
+.table-striped>tbody>tr.change-up-remove>td{
+    transition: all 1s;
+  -webkit-transition: all 1s ease-in-out;
+}
+.table-striped>tbody>tr.change-up-add,.table-striped>tbody>tr.change-up-remove  {
+  background-color: white;
+  background-color: green;
+  transition: all 1s;
+  -webkit-transition: all 1s ease-in-out;
+}
+.table-striped>tbody>tr.change-up-add-active>td {
+  background-color: green;
+}
+.table-striped>tbody>tr.change-up-remove {
+    background-color: green;
+}
+.table-striped>tbody>tr.change-up-remove-active {
+  background-color: white;
+
+}
+.input-icon.input-icon-right>.search-icon {
+left: auto;
+right: 20px;
+top: 3px;
+}
+.input-icon>.search-icon {
+padding: 0 3px;
+z-index: 2;
+position: absolute;
+top: 1px;
+bottom: 1px;
+left: 3px;
+line-height: 28px;
+display: inline-block;
+color: #909090;
+font-size: 16px;
+}
+.search-icon {
+text-align: center;
+}
+/*Search box style*/
+.nav-search {
+right: 22px;
+line-height: 24px;
+}
+.nav-search .nav-search-input {
+border: 1px solid #6fb3e0;
+width: 152px;
+height: 28px !important;
+padding-top: 2px;
+padding-bottom: 2px;
+border-radius: 4px !important;
+font-size: 13px;
+line-height: 1.3;
+color: #666 !important;
+z-index: 11;
+-webkit-transition: width ease .15s;
+transition: width ease .15s;
+}
+.input-icon>input {
+padding-left: 24px;
+padding-right: 6px;
+}
+button{
+  border-radius: 0 !important;
+}
+
+.input-icon>.search-icon {
+padding: 0 3px;
+z-index: 2;
+position: absolute;
+top: 1px;
+bottom: 1px;
+left: 3px;
+line-height: 28px;
+display: inline-block;
+color: #909090;
+font-size: 16px;
+}
+.nav-search .nav-search-icon {
+color: #6fb3e0 !important;
+font-size: 14px !important;
+line-height: 24px !important;
+background-color: transparent;
+}
+.nav-search .nav-search-icon {
+border: none;
+border-radius: 0;
+padding: 0 3px !important;
+}
+.nav-search .search-icon {
+text-align: center;
+}
+
+.nav-search .input-icon {
+position: relative;
+}
+.nav-search span.input-icon {
+display: inline-block;
+}
+.nav-search .input-icon>input {
+padding-left: 24px;
+padding-right: 6px;
+}
+.sw-search {
+float: right;
+margin-top: -4.5px;
+}
+
+.blog-masthead {
+  background-color: #428bca;
+  -webkit-box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+          box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+}
+
+/* Nav links */
+.blog-nav-item {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  font-weight: 500;
+  color: #cdddeb;
+}
+.blog-nav-item:hover,
+.blog-nav-item:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Active state gets a caret at the bottom */
+.blog-nav .active {
+  color: #fff;
+}
+.blog-nav .active:after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -5px;
+  vertical-align: middle;
+  content: " ";
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid;
+  border-left: 5px solid transparent;
+}
+
+
+/*
+ * Blog name and description
+ */
+
+.blog-header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.blog-title {
+  margin-top: 30px;
+  margin-bottom: 0;
+  font-weight: normal;
+}
+.blog-description {
+  font-size: 20px;
+  color: #999;
+}
+
+/*
+ * Blog posts
+ */
+
+.blog-post {
+  margin-bottom: 60px;
+}
+.blog-post-title {
+  margin-bottom: 5px;
+  font-size: 36px;
+}
+.blog-post-meta {
+  margin-bottom: 20px;
+  color: #999;
+}
