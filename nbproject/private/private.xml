@@ -3,10 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/wamp/www/cotizadormasoko/api/v1/index.php</file>
-            <file>file:/C:/wamp/www/cotizadormasoko/index.php</file>
-            <file>file:/C:/wamp/www/cotizadormasoko/api/v1/dbHandler.php</file>
-            <file>file:/C:/wamp/www/cotizadormasoko/app/cotiCtrl.js</file>
+            <file>file:/opt/lampp/htdocs/cotizador/index.php</file>
+            <file>file:/opt/lampp/htdocs/cotizador/jopo3003_cotizador.sql</file>
+            <file>file:/opt/lampp/htdocs/cotizador/api/v1/dbConnect.php</file>
+            <file>file:/opt/lampp/htdocs/cotizador/api/config.php</file>
+            <file>file:/opt/lampp/htdocs/cotizador/api/v1/passwordHash.php</file>
+            <file>file:/opt/lampp/htdocs/cotizador/api/v1/authentication.php</file>
         </group>
     </open-files>
 </project-private>

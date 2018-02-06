@@ -5,5 +5,5 @@
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', '');
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'cotizadormasoko');
+define('DB_NAME', 'jopo3003_cotizador');
 ?>
